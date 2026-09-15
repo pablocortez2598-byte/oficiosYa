@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="es-AR" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="OficiosYa Jáchal — Encontrá electricistas, plomeros, albañiles, gasistas y técnicos de confianza en el departamento de Jáchal, San Juan. Mirá fotos reales y contactá directo por WhatsApp.">
+  <meta name="keywords"
+    content="oficios jachal, electricista jachal, plomero jachal, gasista jachal, albañil jachal, san juan, oficiosya">
+  <title>OficiosYa — Trabajadores de Confianza en Jáchal (San Juan)</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Zilla+Slab:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Estilos principales -->
+  <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+  <!-- ============================================
+       HEADER / NAVEGACIÓN
+       ============================================ -->
+  <header class="site-header" id="siteHeader">
+    <div class="wrap header-inner">
+      <a href="#inicio" class="logo" aria-label="OficiosYa Jáchal Inicio">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 44 44" width="38" height="38" fill="none">
+            <rect width="44" height="44" rx="12" fill="url(#logoGrad)" />
+            <!-- Wrench icon -->
+            <path d="M29 13a6 6 0 0 0-7.3 1.3l-2.2 2.2 4.2 4.2 2.2-2.2A6 6 0 0 0 29 13z" fill="#FFFFFF" />
+            <path d="M22.5 17.5L13.2 26.8a2.5 2.5 0 0 0 0 3.5l1 1a2.5 2.5 0 0 0 3.5 0l9.3-9.3-4.5-4.5z"
+              fill="#FFF2D6" />
+            <!-- Lightning spark -->
+            <polygon points="17,11 12,20 16,20 15,28 22,17 18,17" fill="#F0A93B" stroke="#12283F" stroke-width="1.5"
+              stroke-linejoin="round" />
+            <defs>
+              <linearGradient id="logoGrad" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#1B3A5C" />
+                <stop offset="1" stop-color="#0F2135" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <div class="logo-text-group">
+          <span class="logo-text">Oficios<em>Ya</em></span>
+          <span class="logo-badge">Jáchal</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
+        <a href="#oficios" class="nav-link">Oficios</a>
+        <a href="#trabajadores" class="nav-link">Directorio</a>
+        <a href="#presupuesto-express" class="nav-link">Cotizador Rápido</a>
+        <a href="#como-funciona" class="nav-link">Cómo Funciona</a>
+        <a href="#sumate" class="nav-link nav-cta">
+          <span class="nav-cta-icon">⚡</span> Sumá tu Oficio
+        </a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema claro/oscuro"
+          title="Cambiar modo claro / oscuro">
+          <span class="theme-icon light-icon" aria-hidden="true">☀️</span>
+          <span class="theme-icon dark-icon" aria-hidden="true">🌙</span>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
+    <section class="hero" id="inicio">
+      <div class="hero-bg-accent" aria-hidden="true"></div>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="hero-pill">
+            <span class="pill-dot"></span>
+            <span>Jáchal, San Juan · Red Local de Trabajadores</span>
+          </div>
+          <h1>Un problema en casa no debería depender de a quién conocés.</h1>
+          <p class="hero-sub">
+            Encontrá electricistas, plomeros, gasistas y albañiles de nuestro departamento.
+            Mirá fotos de trabajos anteriores, leé reseñas de vecinos y contactalos directo por WhatsApp.
+          </p>
+
+          <!-- Search Form -->
+          <form class="search-box" id="searchForm" role="search" aria-label="Buscador de trabajadores">
+            <div class="field field-keyword">
+              <label for="searchKeyword">¿Qué arreglo necesitás?</label>
+              <div class="input-with-icon">
+                <span class="input-icon" aria-hidden="true">🔍</span>
+                <input type="text" id="searchKeyword" placeholder="Ej: calefón, tablero, humedad, cámara...">
+              </div>
+            </div>
+
+            <div class="field field-oficio">
+              <label for="oficioSelect">Oficio</label>
+              <select id="oficioSelect" aria-label="Seleccionar oficio">
+                <option value="">Todos los oficios</option>
+              </select>
+            </div>
+
+            <div class="field field-zona">
+              <label for="zonaSelect">Zona / Distrito</label>
+              <select id="zonaSelect" aria-label="Seleccionar distrito de Jáchal">
+                <option value="">Todo Jáchal</option>
+                <option value="Centro">San José (Centro)</option>
+                <option value="Pampa Vieja">Pampa Vieja</option>
+                <option value="Villa Mercedes">Villa Mercedes</option>
+                <option value="Huaco">Huaco</option>
+                <option value="Mogna">Mogna</option>
+                <option value="Niquivil">Niquivil</option>
+                <option value="El Rincón">El Rincón</option>
+                <option value="Gran China">Gran China</option>
+                <option value="Otra Banda">Otra Banda</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-search" id="btnSearch">
+              <span>Buscar</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </form>
+
+          <!-- Quick Filters Hero -->
+          <div class="hero-quick-filters">
+            <span class="quick-title">Búsquedas frecuentes:</span>
+            <button type="button" class="quick-btn" data-quick-oficio="electricista">⚡ Electricistas</button>
+            <button type="button" class="quick-btn" data-quick-oficio="plomero">🔧 Plomeros</button>
+            <button type="button" class="quick-btn" data-quick-oficio="gasista">🔥 Gasistas</button>
+            <button type="button" class="quick-btn" data-quick-urgent="true">🚨 Urgencias 24h</button>
+          </div>
+
+          <div class="hero-foot">
+            <p class="hero-note">¿Sos trabajador de un oficio en Jáchal? <a href="#sumate">Creá tu perfil gratis y
+                sumate →</a></p>
+          </div>
+        </div>
+
+        <!-- Floating Hero Cards Showcase -->
+        <div class="hero-panel" aria-label="Perfiles destacados de Jáchal">
+          <div class="panel-card panel-card--1 animate-float-1" id="heroCard1">
+            <div class="pc-head">
+              <span class="pc-badge-tag">⚡ Electricista & Redes</span>
+              <span class="pc-zone">Centro · Jáchal</span>
+            </div>
+            <div class="pc-body">
+              <div class="pc-avatar">FS</div>
+              <div>
+                <strong class="pc-name">Facundo Santana</strong>
+                <span class="pc-status">● Disponible para presupuestos</span>
+              </div>
+            </div>
+            <div class="pc-tags">
+              <span>Instalación eléctrica</span>
+              <span>Cámaras de seguridad</span>
+            </div>
+            <div class="pc-footer">
+              <span class="pc-tag-new">⭐ Perfil Verificado</span>
+              <span class="pc-action">Ver portfolio →</span>
+            </div>
+          </div>
+
+          <div class="panel-card panel-card--2 animate-float-2" id="heroCard2">
+            <div class="pc-head">
+              <span class="pc-badge-tag">🔥 Gasista Matriculado</span>
+              <span class="pc-zone">Pampa Vieja</span>
+            </div>
+            <div class="pc-body">
+              <div class="pc-avatar pc-avatar--gas">DA</div>
+              <div>
+                <strong class="pc-name">Diego Aguilar</strong>
+                <div class="pc-stars">★★★★★ <strong>4.8</strong> (8 reseñas)</div>
+              </div>
+            </div>
+            <div class="pc-footer">
+              <span class="pc-verified">✓ Matrícula habilitante</span>
+            </div>
+          </div>
+
+          <div class="panel-card panel-card--3 animate-float-3" id="heroCard3">
+            <div class="pc-head">
+              <span class="pc-badge-tag">🔧 Plomería y Sanitarios</span>
+              <span class="pc-zone">Centro / Huaco</span>
+            </div>
+            <div class="pc-body">
+              <div class="pc-avatar pc-avatar--plumber">RM</div>
+              <div>
+                <strong class="pc-name">Rubén Molina</strong>
+                <div class="pc-stars">★★★★☆ <strong>4.2</strong> (6 reseñas)</div>
+              </div>
+            </div>
+            <div class="pc-footer">
+              <span class="pc-urgent">🚨 Atiende urgencias</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         STATS / IMPACTO LOCAL JÁCHAL
+         ============================================ -->
+    <section class="stats" aria-label="Métricas de la plataforma en Jáchal">
+      <div class="wrap stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon-wrap">🏢</div>
+          <div class="stat-info">
+            <strong>100% Local</strong>
+            <span>Pensado y desarrollado exclusivamente para Jáchal, San Juan</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon-wrap">🛡️</div>
+          <div class="stat-info">
+            <strong>Regla de 5 Reseñas</strong>
+            <span>El promedio se muestra con 5 opiniones reales para evitar sesgos</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon-wrap">💬</div>
+          <div class="stat-info">
+            <strong>WhatsApp Directo</strong>
+            <span>Sin intermediarios, coordinás horario y precio directamente con el trabajador</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon-wrap">📸</div>
+          <div class="stat-info">
+            <strong>Portfolios Reales</strong>
+            <span>Fotos de trabajos anteriores para que elijas con total confianza</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         EXPLORADOR DE OFICIOS (CHIPS)
+         ============================================ -->
+    <section class="section section-oficios" id="oficios">
+      <div class="wrap">
+        <div class="section-title-wrap">
+          <span class="section-kicker">Categorías de Servicios</span>
+          <h2>Elegí el oficio que necesitás hoy</h2>
+          <p class="section-sub">Seleccioná un rubro para filtrar al instante a los profesionales que trabajan en tu
+            distrito.</p>
+        </div>
+
+        <div class="chip-row-container">
+          <div class="chip-row" id="chipRow" role="group" aria-label="Filtro de oficios">
+            <!-- Renderizado dinámicamente por JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         DIRECTORIO DE TRABAJADORES
+         ============================================ -->
+    <section class="section section-alt" id="trabajadores">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">Profesionales en Jáchal</span>
+            <h2>Trabajadores Disponibles</h2>
+            <p class="section-sub" id="resultCount">Cargando directorio de profesionales...</p>
+          </div>
+
+          <!-- Controls Toolbar -->
+          <div class="toolbar-controls">
+            <!-- Filter by matricula / urgencia -->
+            <div class="filter-toggles">
+              <label class="toggle-pill" id="filterMatriculaLabel">
+                <input type="checkbox" id="filterMatricula">
+                <span>Matriculados</span>
+              </label>
+              <label class="toggle-pill" id="filterUrgenciaLabel">
+                <input type="checkbox" id="filterUrgencia">
+                <span>Urgencias 24h</span>
+              </label>
+              <label class="toggle-pill" id="filterPresupuestoLabel">
+                <input type="checkbox" id="filterPresupuesto">
+                <span>Presupuesto sin cargo</span>
+              </label>
+            </div>
+
+            <!-- Sort By -->
+            <div class="sort-wrapper">
+              <label for="sortSelect" class="sr-only">Ordenar por</label>
+              <select id="sortSelect" class="sort-select" aria-label="Ordenar listado">
+                <option value="destacados">⭐ Recomendados / Destacados</option>
+                <option value="calificacion">★ Mejor puntuación</option>
+                <option value="mas-resenas">💬 Más reseñas</option>
+                <option value="recientes">🕒 Más recientes</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filtros activos badges -->
+        <div class="active-filters-bar" id="activeFiltersBar" hidden>
+          <span class="active-filters-label">Filtros activos:</span>
+          <div class="active-filters-list" id="activeFiltersList"></div>
+          <button type="button" class="btn-clear-filters" id="btnClearFilters">Limpiar todos</button>
+        </div>
+
+        <!-- Worker Grid -->
+        <div class="worker-grid" id="workerGrid" role="region" aria-live="polite">
+          <!-- Renderizado dinámico desde script.js -->
+        </div>
+
+        <!-- Estado vacío -->
+        <div class="empty-state" id="emptyState" hidden>
+          <div class="empty-state-icon">🔎</div>
+          <h3>No encontramos trabajadores con estos filtros</h3>
+          <p>Probá cambiando el oficio o seleccionando "Todo Jáchal".</p>
+          <div class="empty-state-actions">
+            <button class="btn btn-secondary" id="btnResetFilters">Restablecer filtros</button>
+            <a href="#sumate" class="btn btn-primary">¿Hacés este trabajo? Sumate</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         COTIZADOR / ASISTENTE RÁPIDO DE PRESUPUESTO
+         ============================================ -->
+    <section class="section section-presupuesto" id="presupuesto-express">
+      <div class="wrap">
+        <div class="presupuesto-box">
+          <div class="presupuesto-header">
+            <span class="badge-accent">Asistente Rápido</span>
+            <h2>¿No sabés a quién llamar? Solicitá un presupuesto en 1 minuto</h2>
+            <p>Completá qué problema tenés y te preparamos el mensaje perfecto para consultar a los especialistas de tu
+              zona.</p>
+          </div>
+
+          <form class="presupuesto-form" id="presupuestoForm">
+            <div class="p-grid">
+              <div class="field">
+                <label for="pOficio">Oficio que necesitás *</label>
+                <select id="pOficio" required>
+                  <option value="" disabled selected>Seleccioná el rubro</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="pZona">Tu distrito o zona *</label>
+                <select id="pZona" required>
+                  <option value="" disabled selected>Seleccioná tu localidad</option>
+                  <option value="Centro">San José (Centro)</option>
+                  <option value="Pampa Vieja">Pampa Vieja</option>
+                  <option value="Villa Mercedes">Villa Mercedes</option>
+                  <option value="Huaco">Huaco</option>
+                  <option value="Mogna">Mogna</option>
+                  <option value="Niquivil">Niquivil</option>
+                  <option value="El Rincón">El Rincón</option>
+                  <option value="Gran China">Gran China</option>
+                  <option value="Otra Banda">Otra Banda</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="pUrgencia">Urgencia del trabajo</label>
+                <select id="pUrgencia">
+                  <option value="Normal">Normal (consultar presupuesto con tiempo)</option>
+                  <option value="Urgente">Urgente (para resolver hoy mismo / 24hs)</option>
+                  <option value="FinDeSemana">Coordinar para fin de semana</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="pDescripcion">Describí brevemente el arreglo o trabajo *</label>
+              <textarea id="pDescripcion" rows="3"
+                placeholder="Ej: Necesito revisar el disyuntor que salta cuando prendo el termotanque, y cambiar dos tomas en la cocina..."
+                required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg">
+              <span>Buscar Trabajadores y Generar Consulta por WhatsApp</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </button>
+          </form>
+
+          <!-- Resultados del asistente -->
+          <div class="presupuesto-results" id="presupuestoResults" hidden>
+            <div class="p-results-head">
+              <h3>Trabajadores recomendados para tu pedido:</h3>
+              <button type="button" class="btn-text" id="btnClosePResults">✕ Cerrar</button>
+            </div>
+            <div class="p-results-list" id="pResultsList"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         CÓMO FUNCIONA
+         ============================================ -->
+    <section class="section" id="como-funciona">
+      <div class="wrap">
+        <div class="section-title-wrap text-center">
+          <span class="section-kicker">Transparente y Seguro</span>
+          <h2>¿Cómo funciona OficiosYa en Jáchal?</h2>
+          <p class="section-sub mx-auto">Una solución directa para conectar a vecinos con trabajadores independientes de
+            nuestro departamento.</p>
+        </div>
+
+        <div class="steps-container">
+          <ol class="steps">
+            <li class="step-card">
+              <div class="step-icon-badge">1</div>
+              <div class="step-illustration">🔍</div>
+              <h3>Buscás por oficio y zona</h3>
+              <p>Filtrá fácilmente entre electricistas, gasistas, plomeros o albañiles de San José, Pampa Vieja, Huaco o
+                Mogna.</p>
+            </li>
+            <li class="step-card">
+              <div class="step-icon-badge">2</div>
+              <div class="step-illustration">📸</div>
+              <h3>Mirás fotos y calificaciones</h3>
+              <p>Revisás fotos de trabajos anteriores reales. Nuestro sistema requiere al menos 5 calificaciones para
+                calcular promedios seguros.</p>
+            </li>
+            <li class="step-card">
+              <div class="step-icon-badge">3</div>
+              <div class="step-illustration">💬</div>
+              <h3>Contactás por WhatsApp directo</h3>
+              <p>Sin comisiones ocultas para el cliente ni demoras. Coordinás presupuesto, fechas y horario directo con
+                el trabajador.</p>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Trust banners / Regla de 5 reseñas explicada -->
+        <div class="trust-banner">
+          <div class="trust-item">
+            <div class="trust-icon">🛡️</div>
+            <div>
+              <h4>¿Por qué la Regla de las 5 Reseñas?</h4>
+              <p>Para proteger tanto al cliente como al trabajador: una sola opinión aislada no condiciona la reputación
+                de nadie. Solo mostramos el promedio por estrellas a partir de la 5ta opinión verificada.</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">📞</div>
+            <div>
+              <h4>Moderación y Números Verificados</h4>
+              <p>Validamos números de teléfono para reducir calificaciones malintencionadas o perfiles falsos dentro de
+                la comunidad de Jáchal.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SUMATE (ALTA DE TRABAJADOR + PREVIEW EN VIVO)
+         ============================================ -->
+    <section class="section section-dark" id="sumate">
+      <div class="wrap sumate-grid">
+        <div class="sumate-copy">
+          <span class="badge-accent-light">Para Trabajadores Independientes</span>
+          <h2>¿Ofrecés un oficio en Jáchal? Hacé visible tu trabajo</h2>
+          <p>
+            Sumate a OficiosYa en 2 minutos. Creá tu perfil profesional con tus fotos de trabajos,
+            atendé a clientes de tu zona y dejá de depender exclusivamente del boca a boca o grupos dispersos.
+          </p>
+
+          <ul class="sumate-list">
+            <li>
+              <strong>100% gratuito para empezar:</strong> Tu perfil visible para vecinos de todo Jáchal.
+            </li>
+            <li>
+              <strong>Portfolio organizado:</strong> Subí 2 o 3 fotos de tus mejores trabajos para generar confianza
+              inmediata.
+            </li>
+            <li>
+              <strong>Reputación justa:</strong> El promedio de estrellas se publica recién con 5 reseñas reales.
+            </li>
+            <li>
+              <strong>Mensajes directos a tu WhatsApp:</strong> Sin intermediarios ni porcentajes que te descuenten.
+            </li>
+          </ul>
+
+          <div class="sumate-quote">
+            <p><em>"Tener un lugar donde mostrar fotos de mis tableros y cámaras instaladas me permite generar confianza
+                con clientes que no me conocen."</em></p>
+            <cite>— Facundo Santana, Electricista y Soporte Técnico (JaTech Jáchal)</cite>
+          </div>
+        </div>
+
+        <!-- Formulario con vista previa en vivo -->
+        <div class="sumate-form-wrapper">
+          <form class="signup-card" id="signupForm" novalidate>
+            <div class="form-header">
+              <h3>Registrar mi perfil de oficio</h3>
+              <p>Completá tus datos para empezar a recibir clientes</p>
+            </div>
+
+            <div class="field">
+              <label for="nombre">Nombre y Apellido o comercio*</label>
+              <input type="text" id="nombre" placeholder="Ej: Facundo Santana o JaTech" required>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="oficioInput">Oficio Principal *</label>
+                <select id="oficioInput" required>
+                  <option value="" disabled selected>Elegí tu oficio</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="zonaInput">Distrito Base *</label>
+                <select id="zonaInput" required>
+                  <option value="Centro">San José (Centro)</option>
+                  <option value="Pampa Vieja">Pampa Vieja</option>
+                  <option value="Villa Mercedes">Villa Mercedes</option>
+                  <option value="Huaco">Huaco</option>
+                  <option value="Mogna">Mogna</option>
+                  <option value="Niquivil">Niquivil</option>
+                  <option value="El Rincón">El Rincón</option>
+                  <option value="Gran China">Gran China</option>
+                  <option value="Otra Banda">Otra Banda</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="telefono">Número de WhatsApp (con código) *</label>
+                <input type="tel" id="telefono" placeholder="Ej: 264 412 3456" required>
+                <small class="field-help">Sin 0 ni 15. Usado para que te contacten.</small>
+              </div>
+
+              <div class="field">
+                <label for="precioRef">Precio o Visita de Referencia (opcional)</label>
+                <input type="text" id="precioRef" placeholder="Ej: Presupuesto sin cargo / Visita $15.000">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="bioInput">Especialidades o trabajos que realizás (breve)</label>
+              <input type="text" id="bioInput"
+                placeholder="Ej: Instalación de tableros, cámaras IP, cableado domiciliario...">
+            </div>
+
+            <!-- Checks de matricula y urgencia -->
+            <div class="field-checkboxes">
+              <label class="custom-checkbox">
+                <input type="checkbox" id="checkMatricula">
+                <span>Cuento con Matrícula Habilitante</span>
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" id="checkUrgencias">
+                <span>Atiendo Urgencias / Guardias 24hs</span>
+              </label>
+            </div>
+
+            <!-- Carga de fotos de trabajos (hasta 3) -->
+            <div class="field">
+              <label for="fotos">Fotos de tus trabajos (hasta 3 fotos reales)</label>
+              <div class="file-dropzone" id="dropzone">
+                <input type="file" id="fotos" accept="image/*" multiple aria-label="Subir fotos de trabajos">
+                <div class="dropzone-content">
+                  <span class="dz-icon">📷</span>
+                  <p><strong>Hacé clic para subir fotos</strong> o arrastralas aquí</p>
+                  <span class="dz-sub">Máximo 3 imágenes (JPG, PNG, WebP)</span>
+                </div>
+              </div>
+              <div class="photo-preview" id="photoPreview" aria-live="polite"></div>
+            </div>
+
+            <!-- Vista previa en vivo -->
+            <div class="live-preview-box">
+              <span class="preview-label">Vista previa en tiempo real de tu tarjeta:</span>
+              <div class="preview-card-slot" id="previewCardSlot">
+                <!-- Se llena dinámicamente -->
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block btn-submit" id="btnSubmitWorker">
+              <span>Publicar mi Perfil en OficiosYa</span>
+            </button>
+
+            <div class="form-feedback" id="formFeedback" hidden></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <div class="logo logo--footer">
+          <span class="logo-text logo-text--footer">Oficios<em>Ya</em></span>
+          <span class="logo-badge">Jáchal</span>
+        </div>
+        <p class="footer-desc">
+          Plataforma comunitaria de servicios y oficios para conectar vecinos y profesionales independientes en el
+          departamento de Jáchal, San Juan.
+        </p>
+        <div class="footer-distritos">
+          <strong>Distritos cubiertos:</strong>
+          <span>San José de Jáchal · Pampa Vieja · Villa Mercedes · Huaco · Mogna · Niquivil · El Rincón · Gran China ·
+            Otra Banda</span>
+        </div>
+      </div>
+
+      <div class="footer-meta"></div>
+      <div>
+        <p class="footer-copy">© 2026 OficiosYa Jáchal.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       MODAL DE PERFIL DETALLADO
+       ============================================ -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalWorkerName" hidden>
+    <div class="modal" id="modalContainer">
+      <button class="modal-close" id="modalClose" aria-label="Cerrar ventana de perfil">✕</button>
+      <div id="modalBody" class="modal-body-content">
+        <!-- Renderizado dinámico desde script.js -->
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- ============================================
+       TOAST CONTAINER
+       ============================================ -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- JavaScript principal -->
+  <script src="script.js"></script>
+</body>
+
+</html>
